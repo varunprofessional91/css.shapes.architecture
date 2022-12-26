@@ -1,0 +1,429 @@
+
+* {
+    margin: 0;
+    padding: 0;
+    color: rgb(218, 194, 175);
+    font-family: centra, monospace;
+    font-size: 1em;
+    box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+    user-select: none;
+    -webkit-user-select: none;
+}
+
+*:focus {
+    outline: none;
+}
+
+a:link, a:active, a:hover, a:visited {
+    color: transparent;
+    text-decoration: none;
+}
+
+button, input[type="submit"] {
+    cursor: pointer;
+}
+
+@font-face {
+    font-family: ogg;
+    src: url(ogg.ttf);
+}
+
+@font-face {
+    font-family: centra;
+    src: url(centra.ttf);
+}
+
+.mainBox {
+    margin: 0 auto;
+    padding: 10px 0 30px 0;
+    height: auto;
+    width: 60%;
+    min-width: 750px;
+    background-image: linear-gradient(
+            to right top,
+            #272727, #282728, #2a2627, #2b2625,
+            #2b2622, #2a2621, #292721, #272721,
+            #272722, #272722, #272723, #272723);
+    overflow: hidden;
+}
+
+.headerClass {
+    padding: 5px 10px;
+    display: grid;
+    grid-template-columns: 50% 50%;
+    border-bottom: 3px solid rgba(187, 131, 97, 0.8);
+    height: 200px;
+    text-align: center;
+}
+
+.headerChildImages {
+    display: grid;
+    grid-template-rows: 1fr;
+}
+
+.headerChildImageOne, .headerChildImageTwo {
+    grid-column-start: 1;
+    grid-row-start: 1;
+    border: 3px solid rgba(187, 131, 97, 0.8);
+    height: 90px;
+    margin: auto auto;
+}
+
+.headerChildImageOne {
+    background: rgba(187, 131, 97, 1);
+    width: 320px;
+}
+
+.headerChildImageTwo {
+    width: 320px;
+    margin: 30px 40px auto auto;
+}
+
+.headerText {
+    font-size: 6.5em;
+    font-family: ogg, monospace;
+    -webkit-text-stroke: 1px rgb(187, 131, 97);
+    -webkit-text-fill-color: #272722;
+}
+
+.shapesBoxImages, .shapeBoxLines, .shapeBoxText {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    justify-items: center;
+    align-items: center;
+}
+
+.shapeBoxShapeOne, .shapeBoxShapeTwo, .shapeBoxShapeThree {
+    width: 170px;
+    height: 200px;
+    overflow: hidden;
+    text-align: center;
+}
+
+.shapeBoxShapeTwo {
+    transform: scale(.94, 0.94);
+}
+
+.shapeBoxLines > * {
+    width: 45%;
+    min-width: 105px;
+    border: 1px solid rgba(187, 131, 97, 1);
+}
+
+.shapeBoxText > div {
+    width: 65%;
+    min-width: 110px;
+    text-align: center;
+    padding: 20px 0;
+}
+
+.shapeBoxTextStylingOne {
+    font-size: 0.68em;
+    word-spacing: 4px;
+    color: white;
+    text-align: justify;
+    opacity: 0.6;
+}
+
+.shapeBoxTextStylingTwo {
+    font-size: 45px;
+}
+
+.imagesBox {
+    overflow: hidden;
+    height: 420px;
+    margin: 10px 0;
+}
+
+.imagesBoxChildOne {
+    display: grid;
+    grid-template-columns: 50% 50%;
+}
+
+.imagesBoxChildOneImage > img {
+    display: inline-block;
+    margin: 0;
+    padding: 0;
+    opacity: 0.5;
+}
+
+.imagesBoxChildOneTextAndList {
+    background-color: rgba(254, 219, 197, 0.95);
+    font-size: 0.9em;
+    padding: 15% 18%;
+    min-width: 250px;
+}
+
+.imagesBoxChildOneTextAndList > * {
+    margin: auto auto;
+}
+
+.imagesBoxChildOneTextAndList * {
+    color: rgba(0, 0, 0, 0.9);
+}
+
+.imagesBoxChildOneDotsList > li {
+    display: inline-block;
+    width: 8px;
+    height: 8px;
+    border: 1px solid black;
+    border-radius: 50%;
+}
+
+.imagesBoxChildOneDotsList > li:nth-child(3) {
+    background: black
+}
+
+.imagesBoxChildOneText {
+    text-align: justify;
+    font-size: 0.8em;
+    width: 100%;
+    min-width: 280px;
+}
+
+.imagesBoxChildOneButton {
+    display: grid;
+    grid-template-columns: 50% 50%;
+    text-align: center;
+    justify-items: center;
+    align-items: center;
+}
+
+.imagesBoxChildOneButtonStyle * {
+    display: inline-block;
+}
+
+.imagesBoxChildOneButtonStyle {
+    width: 100px;
+    height: 28px;
+    background: transparent;
+    border: 1px solid rgba(0, 0, 0, 0.9);
+    margin-top: 10px;
+    padding: 4px 0;
+    border-radius: 15px;
+    cursor: pointer;
+}
+
+.imagesBoxChildOneButtonStyle:hover {
+    background: white;
+}
+
+.arrowOne:after {
+    content: ' \02C2';
+    font-size: 1em;
+}
+
+.arrowTwo:after {
+    content: ' \02C3';
+    font-size: 1em;
+}
+
+.imagesBoxChildOneButtonText {
+    font-size: 0.8em;
+}
+
+.ImagesBoxChildTwo {
+    position: relative;
+    margin-top: -53%;
+    margin-left: 50%;
+    transform: translateX(-50%);
+    height: 150px;
+    width: 150px;
+}
+
+.ImagesBoxChildTwoCircleUpper {
+    border-radius: 50%;
+    border: 3px solid rgba(221, 160, 160, 0.9);
+    height: 140px;
+    width: 140px;
+    z-index: -1;
+    position: relative;
+}
+
+.ImagesBoxChildTwoCircleInside {
+    width: 90%;
+    height: 90%;
+    margin: 5%;
+    border-radius: 50%;
+    background-color: rgba(221, 160, 160, 0.7);
+    filter: blur(2px);
+    z-index: -2;
+}
+
+.ImagesBoxChildTwoCircleText {
+    font-size: 1.3rem;
+    text-align: center;
+    color: rgba(0, 0, 0, 0.7);
+    margin: -70% 8% 0 0;
+}
+
+.newsBox {
+    height: 500px;
+    margin: 30px 40px;
+    overflow: hidden;
+}
+
+.newsBoxHeaderText:after {
+    content: "news";
+}
+
+.newsBoxImages {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    justify-items: center;
+}
+
+.newsBoxImageOne, .newsBoxImageTwo {
+    border: 2px solid rgba(187, 131, 97, 0.8);
+    height: 350px;
+    width: 300px;
+    background: rgb(48, 48, 41);
+    font-size: .8em;
+    overflow: hidden;
+}
+
+.newsBoxImageOne {
+    margin: -50px 0 0 0;
+    z-index: 5;
+}
+
+.newsBoxImageTwo {
+    margin: -130px 0 0 0;
+    z-index: 2;
+}
+
+.newsBoxImageOneText {
+    margin: 5% 0 0 5%;
+    background: url('img/img1.jpg?d=1') no-repeat;
+    background-size: 100%;
+    width: 95%;
+    height: 100%;
+    overflow: hidden;
+}
+
+.newsBoxImageOneTextOne {
+    width: 100px;
+    height: 100px;
+    background: rgb(243, 213, 194);
+    border-radius: 50%;
+    text-align: center;
+    color: rgba(0, 0, 0, 0.8);
+    padding-top: 42px;
+    margin: 10px 0 0 10px;
+}
+
+.newsBoxImageOneTextTwo {
+    height: 100%;
+    padding: 90% 0 0 3%;
+    margin: -39% 0 0 0;
+    color: rgb(255, 255, 255);
+    background: linear-gradient(0deg, rgba(0, 0, 0, 0.5) 0%, rgba(0, 0, 0, 0.0) 100%);
+}
+
+.newsBoxImageOneButton, .newsBoxImageTwoButton {
+    font-size: 1em;
+    text-align: center;
+    height: 20px;
+    width: 75px;
+    margin: 4px 0 0 0;
+    padding: 1px 1px 0 1px;
+    color: black;
+    background: rgb(243, 213, 194);
+    border: transparent;
+}
+
+.newsBoxImageOneButton > *, .newsBoxImageTwoButton > * {
+    color: black;
+}
+
+.newsBoxImageOneButton:hover, .newsBoxImageTwoButton:hover {
+    cursor: pointer;
+}
+
+.newsBoxImageTwoText {
+    background: url('img/img2.jpg?d=1') no-repeat;
+    background-size: 100%;
+}
+
+.newsBoxImageArrowButtons {
+    width: 97px;
+    height: 48px;
+    right: 20px;
+    margin: -48px 0 0 570px;
+}
+
+.newsBoxImageArrowButtons > * {
+    display: inline-block;
+}
+
+.newsBoxImageArrowButtonIcon {
+    width: 45px;
+    height: 45px;
+    border-radius: 50%;
+    border: 3px solid rgba(202, 155, 124, 1);
+    padding-top: 9px;
+    text-align: center;
+    font-size: 22px;
+    cursor: pointer;
+}
+
+.newsBoxImageArrowButtonIcon:hover {
+    background: white;
+    color: black;
+    border: 2px solid white;
+}
+
+.arrowColor:hover {
+    color: black;
+}
+
+.boxBlog {
+    height: auto;
+    margin-bottom: 150px;
+    overflow: hidden;
+}
+
+.boxBlogHeaderText {
+    margin: -20px 0 0 70%;
+}
+
+.boxBlogImage {
+    width: 90%;
+    height: 408px;
+    padding: 2% 2% 0 0;
+    margin: -40px auto 0 auto;
+    border: 2px solid rgba(187, 131, 97, 1);
+    color: rgb(255, 255, 255);
+}
+
+.boxBlogImageBox {
+    background: url('img/flower.jpg?d=1') no-repeat;
+    background-size: 810px;
+    height: 408px;
+}
+
+.boxBlogImageBoxTextAnImage {
+    height: 100%;
+    width: 100%;
+    padding: 325px 0 0 1%;
+    color: white;
+    background: linear-gradient(0deg, rgba(0, 0, 0, 0.5) 0%, rgba(0, 0, 0, 0.0) 100%);
+}
+
+.boxBlogArrowButtonText {
+    font-size: .8em;
+    padding: 1px 0 0 0;
+}
+
+.footerButton {
+    margin: -120px 0 0 70%;
+}
+
+.footerButton *:hover {
+    color: black;
+}
+
+.footerButton:nth-child(1) {
+    border: 3px solid white;
+}
